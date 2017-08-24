@@ -1,0 +1,311 @@
+EFS:
+
+EFS works based on principle of NFS
+
+efs is region level service --> it is dedicated to only one VPC
+
+thic :- It is increase and decreasing by statically.
+thin :- it is increase and decreasing by dynamically.
+
+NFS ---> Network file system
+
+what is diff b/w elasticity and scalability?
+
+Network ACL:- It is used to stop/start mutiple hits to perticular IP.
+
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 10.45.1.156:/  /opt/esfblco
+
+
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 10.45.1.40:/  /opt/fabtestefs
+
+         mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 10.45.0.89:/  /opt/fabtest
+         mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 10.45.1.222:/  /opt/fabtestefs
+
+10.45.1.222
+        mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 10.45.1.222:/  /opt/fabtestefs
+        mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 10.45.3.193:/  /opt/fabupg
+
+
+Using username "ec2-user".
+Authenticating with public key "imported-openssh-key"
+Last login: Sat Aug  5 03:06:53 2017 from 106.220.153.14
+[ec2-user@ip-10-45-1-157 ~]$ sudo bash
+[root@ip-10-45-1-157 ec2-user]# cd
+[root@ip-10-45-1-157 ~]# ls/opt
+bash: ls/opt: No such file or directory
+[root@ip-10-45-1-157 ~]# ls /opt
+esfblco
+[root@ip-10-45-1-157 ~]# cd /opt/esfblco/
+[root@ip-10-45-1-157 esfblco]# ls
+[root@ip-10-45-1-157 esfblco]# pwd
+/opt/esfblco
+[root@ip-10-45-1-157 esfblco]# mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 10.45.1.157:/  /opt/esfblco
+^C
+[root@ip-10-45-1-157 esfblco]# cd
+[root@ip-10-45-1-157 ~]# mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 10.45.1.157:/  /opt/esfblco
+^C
+[root@ip-10-45-1-157 ~]#
+[root@ip-10-45-1-157 ~]#
+[root@ip-10-45-1-157 ~]#
+[root@ip-10-45-1-157 ~]#
+[root@ip-10-45-1-157 ~]#
+[root@ip-10-45-1-157 ~]# mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 10.45.1.157:/  /opt/esfblco
+^C
+[root@ip-10-45-1-157 ~]# ^C
+[root@ip-10-45-1-157 ~]# ^C
+[root@ip-10-45-1-157 ~]#
+[root@ip-10-45-1-157 ~]# ^C
+[root@ip-10-45-1-157 ~]# ^C
+[root@ip-10-45-1-157 ~]# ^C
+[root@ip-10-45-1-157 ~]# ^C
+[root@ip-10-45-1-157 ~]# ^C
+[root@ip-10-45-1-157 ~]# ^C
+[root@ip-10-45-1-157 ~]# ^C
+[root@ip-10-45-1-157 ~]# ^C
+[root@ip-10-45-1-157 ~]# ^C
+[root@ip-10-45-1-157 ~]# ^C
+[root@ip-10-45-1-157 ~]# ^C
+[root@ip-10-45-1-157 ~]# ^C
+[root@ip-10-45-1-157 ~]# ^C
+[root@ip-10-45-1-157 ~]# mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 10.45.1.156:/  /opt/esfblco
+[root@ip-10-45-1-157 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda2       10G  1.3G  8.8G  13% /
+devtmpfs        477M     0  477M   0% /dev
+tmpfs           496M     0  496M   0% /dev/shm
+tmpfs           496M   13M  483M   3% /run
+tmpfs           496M     0  496M   0% /sys/fs/cgroup
+tmpfs           100M     0  100M   0% /run/user/1000
+tmpfs           100M     0  100M   0% /run/user/0
+10.45.1.156:/   8.0E     0  8.0E   0% /opt/esfblco
+[root@ip-10-45-1-157 ~]#
+Using username "ec2-user".
+Authenticating with public key "imported-openssh-key"
+Last login: Sat Aug  5 03:36:44 2017 from 106.220.153.14
+[ec2-user@ip-10-45-1-157 ~]$ sudo bash
+[root@ip-10-45-1-157 ec2-user]# cd /opt/esfblco/
+[root@ip-10-45-1-157 esfblco]# ls
+t1  t2  t3
+[root@ip-10-45-1-157 esfblco]# vi t1
+[root@ip-10-45-1-157 esfblco]#
+==============================================================================================
+
+Using username "ec2-user".
+Authenticating with public key "imported-openssh-key"
+[ec2-user@ip-10-45-0-189 ~]$ sudo bash
+[root@ip-10-45-0-189 ec2-user]# cd
+[root@ip-10-45-0-189 ~]# mkdir /opt/fabtest
+[root@ip-10-45-0-189 ~]# cd /opt/
+[root@ip-10-45-0-189 opt]# ls
+fabtest
+[root@ip-10-45-0-189 opt]# cd fabtest/
+[root@ip-10-45-0-189 fabtest]# ls
+[root@ip-10-45-0-189 fabtest]# cd
+[root@ip-10-45-0-189 ~]# sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retr                              ans=2 10.45.0.89:/  /opt/fabtest
+mount: wrong fs type, bad option, bad superblock on 10.45.0.89:/,
+       missing codepage or helper program, or other error
+       (for several filesystems (e.g. nfs, cifs) you might
+       need a /sbin/mount.<type> helper program)
+
+       In some cases useful info is found in syslog - try
+       dmesg | tail or so.
+[root@ip-10-45-0-189 ~]# mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2                               10.45.0.89:/  /opt/fabtest
+mount: wrong fs type, bad option, bad superblock on 10.45.0.89:/,
+       missing codepage or helper program, or other error
+       (for several filesystems (e.g. nfs, cifs) you might
+       need a /sbin/mount.<type> helper program)
+
+       In some cases useful info is found in syslog - try
+       dmesg | tail or so.
+[root@ip-10-45-0-189 ~]#
+[root@ip-10-45-0-189 ~]#
+[root@ip-10-45-0-189 ~]# yum install nfs-utils -y
+Loaded plugins: amazon-id, rhui-lb, search-disabled-repos
+rhui-REGION-client-config-server-7                                                                               | 2.9 kB  00:00:00
+rhui-REGION-rhel-server-releases                                                                                 | 3.5 kB  00:00:00
+rhui-REGION-rhel-server-rh-common                                                                                | 3.8 kB  00:00:00
+(1/7): rhui-REGION-client-config-server-7/x86_64/primary_db                                                      | 5.4 kB  00:00:00
+(2/7): rhui-REGION-rhel-server-rh-common/7Server/x86_64/group                                                    |  104 B  00:00:00
+(3/7): rhui-REGION-rhel-server-releases/7Server/x86_64/group                                                     | 709 kB  00:00:00
+(4/7): rhui-REGION-rhel-server-rh-common/7Server/x86_64/primary_db                                               | 119 kB  00:00:00
+(5/7): rhui-REGION-rhel-server-releases/7Server/x86_64/updateinfo                                                | 2.3 MB  00:00:00
+(6/7): rhui-REGION-rhel-server-rh-common/7Server/x86_64/updateinfo                                               |  32 kB  00:00:00
+(7/7): rhui-REGION-rhel-server-releases/7Server/x86_64/primary_db                                                |  41 MB  00:00:02
+Resolving Dependencies
+--> Running transaction check
+---> Package nfs-utils.x86_64 1:1.3.0-0.48.el7 will be installed
+--> Processing Dependency: gssproxy >= 0.7.0-3 for package: 1:nfs-utils-1.3.0-0.48.el7.x86_64
+--> Processing Dependency: libtirpc >= 0.2.4-0.7 for package: 1:nfs-utils-1.3.0-0.48.el7.x86_64
+--> Processing Dependency: keyutils for package: 1:nfs-utils-1.3.0-0.48.el7.x86_64
+--> Processing Dependency: libevent for package: 1:nfs-utils-1.3.0-0.48.el7.x86_64
+--> Processing Dependency: libnfsidmap for package: 1:nfs-utils-1.3.0-0.48.el7.x86_64
+--> Processing Dependency: quota for package: 1:nfs-utils-1.3.0-0.48.el7.x86_64
+--> Processing Dependency: rpcbind for package: 1:nfs-utils-1.3.0-0.48.el7.x86_64
+--> Processing Dependency: libevent-2.0.so.5()(64bit) for package: 1:nfs-utils-1.3.0-0.48.el7.x86_64
+--> Processing Dependency: libnfsidmap.so.0()(64bit) for package: 1:nfs-utils-1.3.0-0.48.el7.x86_64
+--> Processing Dependency: libtirpc.so.1()(64bit) for package: 1:nfs-utils-1.3.0-0.48.el7.x86_64
+--> Running transaction check
+---> Package gssproxy.x86_64 0:0.7.0-4.el7 will be installed
+--> Processing Dependency: krb5-libs >= 1.15 for package: gssproxy-0.7.0-4.el7.x86_64
+--> Processing Dependency: libini_config.so.3(INI_CONFIG_1.1.0)(64bit) for package: gssproxy-0.7.0-4.el7.x86_64
+--> Processing Dependency: libini_config.so.3(INI_CONFIG_1.2.0)(64bit) for package: gssproxy-0.7.0-4.el7.x86_64
+--> Processing Dependency: libref_array.so.1(REF_ARRAY_0.1.1)(64bit) for package: gssproxy-0.7.0-4.el7.x86_64
+--> Processing Dependency: libverto-module-base for package: gssproxy-0.7.0-4.el7.x86_64
+--> Processing Dependency: libbasicobjects.so.0()(64bit) for package: gssproxy-0.7.0-4.el7.x86_64
+--> Processing Dependency: libcollection.so.2()(64bit) for package: gssproxy-0.7.0-4.el7.x86_64
+--> Processing Dependency: libini_config.so.3()(64bit) for package: gssproxy-0.7.0-4.el7.x86_64
+--> Processing Dependency: libref_array.so.1()(64bit) for package: gssproxy-0.7.0-4.el7.x86_64
+---> Package keyutils.x86_64 0:1.5.8-3.el7 will be installed
+---> Package libevent.x86_64 0:2.0.21-4.el7 will be installed
+---> Package libnfsidmap.x86_64 0:0.25-17.el7 will be installed
+---> Package libtirpc.x86_64 0:0.2.4-0.10.el7 will be installed
+---> Package quota.x86_64 1:4.01-14.el7 will be installed
+--> Processing Dependency: quota-nls = 1:4.01-14.el7 for package: 1:quota-4.01-14.el7.x86_64
+--> Processing Dependency: tcp_wrappers for package: 1:quota-4.01-14.el7.x86_64
+---> Package rpcbind.x86_64 0:0.2.0-42.el7 will be installed
+--> Running transaction check
+---> Package krb5-libs.x86_64 0:1.14.1-27.el7_3 will be updated
+---> Package krb5-libs.x86_64 0:1.15.1-8.el7 will be an update
+---> Package libbasicobjects.x86_64 0:0.1.1-27.el7 will be installed
+---> Package libcollection.x86_64 0:0.6.2-27.el7 will be installed
+---> Package libini_config.x86_64 0:1.3.0-27.el7 will be installed
+--> Processing Dependency: libpath_utils.so.1(PATH_UTILS_0.2.1)(64bit) for package: libini_config-1.3.0-27.el7.x86_64
+--> Processing Dependency: libpath_utils.so.1()(64bit) for package: libini_config-1.3.0-27.el7.x86_64
+---> Package libref_array.x86_64 0:0.1.5-27.el7 will be installed
+---> Package libverto-libevent.x86_64 0:0.2.5-4.el7 will be installed
+---> Package quota-nls.noarch 1:4.01-14.el7 will be installed
+---> Package tcp_wrappers.x86_64 0:7.6-77.el7 will be installed
+--> Running transaction check
+---> Package libpath_utils.x86_64 0:0.2.1-27.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+========================================================================================================================================
+ Package                        Arch                Version                         Repository                                     Size
+========================================================================================================================================
+Installing:
+ nfs-utils                      x86_64              1:1.3.0-0.48.el7                rhui-REGION-rhel-server-releases              398 k
+Installing for dependencies:
+ gssproxy                       x86_64              0.7.0-4.el7                     rhui-REGION-rhel-server-releases              105 k
+ keyutils                       x86_64              1.5.8-3.el7                     rhui-REGION-rhel-server-releases               54 k
+ libbasicobjects                x86_64              0.1.1-27.el7                    rhui-REGION-rhel-server-releases               25 k
+ libcollection                  x86_64              0.6.2-27.el7                    rhui-REGION-rhel-server-releases               41 k
+ libevent                       x86_64              2.0.21-4.el7                    rhui-REGION-rhel-server-releases              214 k
+ libini_config                  x86_64              1.3.0-27.el7                    rhui-REGION-rhel-server-releases               63 k
+ libnfsidmap                    x86_64              0.25-17.el7                     rhui-REGION-rhel-server-releases               49 k
+ libpath_utils                  x86_64              0.2.1-27.el7                    rhui-REGION-rhel-server-releases               27 k
+ libref_array                   x86_64              0.1.5-27.el7                    rhui-REGION-rhel-server-releases               26 k
+ libtirpc                       x86_64              0.2.4-0.10.el7                  rhui-REGION-rhel-server-releases               89 k
+ libverto-libevent              x86_64              0.2.5-4.el7                     rhui-REGION-rhel-server-releases              8.9 k
+ quota                          x86_64              1:4.01-14.el7                   rhui-REGION-rhel-server-releases              179 k
+ quota-nls                      noarch              1:4.01-14.el7                   rhui-REGION-rhel-server-releases               91 k
+ rpcbind                        x86_64              0.2.0-42.el7                    rhui-REGION-rhel-server-releases               59 k
+ tcp_wrappers                   x86_64              7.6-77.el7                      rhui-REGION-rhel-server-releases               79 k
+Updating for dependencies:
+ krb5-libs                      x86_64              1.15.1-8.el7                    rhui-REGION-rhel-server-releases              746 k
+
+Transaction Summary
+========================================================================================================================================
+Install  1 Package  (+15 Dependent packages)
+Upgrade             (  1 Dependent package)
+
+Total download size: 2.2 M
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+(1/17): krb5-libs-1.15.1-8.el7.x86_64.rpm                                                                        | 746 kB  00:00:00
+(2/17): gssproxy-0.7.0-4.el7.x86_64.rpm                                                                          | 105 kB  00:00:00
+(3/17): keyutils-1.5.8-3.el7.x86_64.rpm                                                                          |  54 kB  00:00:00
+(4/17): libcollection-0.6.2-27.el7.x86_64.rpm                                                                    |  41 kB  00:00:00
+(5/17): libbasicobjects-0.1.1-27.el7.x86_64.rpm                                                                  |  25 kB  00:00:00
+(6/17): libevent-2.0.21-4.el7.x86_64.rpm                                                                         | 214 kB  00:00:00
+(7/17): libnfsidmap-0.25-17.el7.x86_64.rpm                                                                       |  49 kB  00:00:00
+(8/17): libini_config-1.3.0-27.el7.x86_64.rpm                                                                    |  63 kB  00:00:00
+(9/17): libpath_utils-0.2.1-27.el7.x86_64.rpm                                                                    |  27 kB  00:00:00
+(10/17): libtirpc-0.2.4-0.10.el7.x86_64.rpm                                                                      |  89 kB  00:00:00
+(11/17): libref_array-0.1.5-27.el7.x86_64.rpm                                                                    |  26 kB  00:00:00
+(12/17): libverto-libevent-0.2.5-4.el7.x86_64.rpm                                                                | 8.9 kB  00:00:00
+(13/17): quota-4.01-14.el7.x86_64.rpm                                                                            | 179 kB  00:00:00
+(14/17): nfs-utils-1.3.0-0.48.el7.x86_64.rpm                                                                     | 398 kB  00:00:00
+(15/17): quota-nls-4.01-14.el7.noarch.rpm                                                                        |  91 kB  00:00:00
+(16/17): rpcbind-0.2.0-42.el7.x86_64.rpm                                                                         |  59 kB  00:00:00
+(17/17): tcp_wrappers-7.6-77.el7.x86_64.rpm                                                                      |  79 kB  00:00:00
+----------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                   2.2 MB/s | 2.2 MB  00:00:01
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : krb5-libs-1.15.1-8.el7.x86_64                                                                                       1/18
+  Installing : libtirpc-0.2.4-0.10.el7.x86_64                                                                                      2/18
+  Installing : rpcbind-0.2.0-42.el7.x86_64                                                                                         3/18
+  Installing : libref_array-0.1.5-27.el7.x86_64                                                                                    4/18
+  Installing : libcollection-0.6.2-27.el7.x86_64                                                                                   5/18
+  Installing : libevent-2.0.21-4.el7.x86_64                                                                                        6/18
+  Installing : libbasicobjects-0.1.1-27.el7.x86_64                                                                                 7/18
+  Installing : libverto-libevent-0.2.5-4.el7.x86_64                                                                                8/18
+  Installing : 1:quota-nls-4.01-14.el7.noarch                                                                                      9/18
+  Installing : libpath_utils-0.2.1-27.el7.x86_64                                                                                  10/18
+  Installing : libini_config-1.3.0-27.el7.x86_64                                                                                  11/18
+  Installing : gssproxy-0.7.0-4.el7.x86_64                                                                                        12/18
+  Installing : tcp_wrappers-7.6-77.el7.x86_64                                                                                     13/18
+  Installing : 1:quota-4.01-14.el7.x86_64                                                                                         14/18
+  Installing : keyutils-1.5.8-3.el7.x86_64                                                                                        15/18
+  Installing : libnfsidmap-0.25-17.el7.x86_64                                                                                     16/18
+  Installing : 1:nfs-utils-1.3.0-0.48.el7.x86_64                                                                                  17/18
+  Cleanup    : krb5-libs-1.14.1-27.el7_3.x86_64                                                                                   18/18
+  Verifying  : rpcbind-0.2.0-42.el7.x86_64                                                                                         1/18
+  Verifying  : 1:quota-4.01-14.el7.x86_64                                                                                          2/18
+  Verifying  : libtirpc-0.2.4-0.10.el7.x86_64                                                                                      3/18
+  Verifying  : libnfsidmap-0.25-17.el7.x86_64                                                                                      4/18
+  Verifying  : libini_config-1.3.0-27.el7.x86_64                                                                                   5/18
+  Verifying  : libbasicobjects-0.1.1-27.el7.x86_64                                                                                 6/18
+  Verifying  : libevent-2.0.21-4.el7.x86_64                                                                                        7/18
+  Verifying  : keyutils-1.5.8-3.el7.x86_64                                                                                         8/18
+  Verifying  : libverto-libevent-0.2.5-4.el7.x86_64                                                                                9/18
+  Verifying  : tcp_wrappers-7.6-77.el7.x86_64                                                                                     10/18
+  Verifying  : libpath_utils-0.2.1-27.el7.x86_64                                                                                  11/18
+  Verifying  : krb5-libs-1.15.1-8.el7.x86_64                                                                                      12/18
+  Verifying  : 1:quota-nls-4.01-14.el7.noarch                                                                                     13/18
+  Verifying  : gssproxy-0.7.0-4.el7.x86_64                                                                                        14/18
+  Verifying  : libcollection-0.6.2-27.el7.x86_64                                                                                  15/18
+  Verifying  : libref_array-0.1.5-27.el7.x86_64                                                                                   16/18
+  Verifying  : 1:nfs-utils-1.3.0-0.48.el7.x86_64                                                                                  17/18
+  Verifying  : krb5-libs-1.14.1-27.el7_3.x86_64                                                                                   18/18
+
+Installed:
+  nfs-utils.x86_64 1:1.3.0-0.48.el7
+
+Dependency Installed:
+  gssproxy.x86_64 0:0.7.0-4.el7              keyutils.x86_64 0:1.5.8-3.el7                 libbasicobjects.x86_64 0:0.1.1-27.el7
+  libcollection.x86_64 0:0.6.2-27.el7        libevent.x86_64 0:2.0.21-4.el7                libini_config.x86_64 0:1.3.0-27.el7
+  libnfsidmap.x86_64 0:0.25-17.el7           libpath_utils.x86_64 0:0.2.1-27.el7           libref_array.x86_64 0:0.1.5-27.el7
+  libtirpc.x86_64 0:0.2.4-0.10.el7           libverto-libevent.x86_64 0:0.2.5-4.el7        quota.x86_64 1:4.01-14.el7
+  quota-nls.noarch 1:4.01-14.el7             rpcbind.x86_64 0:0.2.0-42.el7                 tcp_wrappers.x86_64 0:7.6-77.el7
+
+Dependency Updated:
+  krb5-libs.x86_64 0:1.15.1-8.el7
+
+Complete!
+[root@ip-10-45-0-189 ~]# mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 10.45.0.89:/  /opt/fabtest
+[root@ip-10-45-0-189 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda2       10G  1.3G  8.8G  13% /
+devtmpfs        477M     0  477M   0% /dev
+tmpfs           496M     0  496M   0% /dev/shm
+tmpfs           496M   13M  483M   3% /run
+tmpfs           496M     0  496M   0% /sys/fs/cgroup
+tmpfs           100M     0  100M   0% /run/user/0
+tmpfs           100M     0  100M   0% /run/user/1000
+10.45.0.89:/    8.0E     0  8.0E   0% /opt/fabtest
+[root@ip-10-45-0-189 ~]# cd /opt/
+[root@ip-10-45-0-189 opt]# ls
+fabtest
+[root@ip-10-45-0-189 opt]# cd fabtest/
+[root@ip-10-45-0-189 fabtest]# ls
+t1  t2  t3
+[root@ip-10-45-0-189 fabtest]# vi t1
+[root@ip-10-45-0-189 fabtest]#
+
+ 
+
